@@ -291,4 +291,91 @@
       .catch(() => { /* Keep static fallback values */ });
   }
 
+
+  /* ─────────────────────────────────────────────
+     9. NEXT-PAGE NAVIGATION
+     Shows a bar at the bottom; over-scroll or
+     click navigates to the next page in sequence.
+  ───────────────────────────────────────────── */
+  const PAGE_ORDER = [
+    'index.html', 'about.html', 'research.html',
+    'publications.html', 'projects.html', 'experience.html', 'contact.html'
+  ];
+  const PAGE_NAMES = {
+    'index.html':       'Home',
+    'about.html':       'About',
+    'research.html':    'Research',
+    'publications.html':'Publications',
+    'projects.html':    'Projects',
+    'experience.html':  'Experience',
+    'contact.html':     'Contact',
+  };
+
+  const curPage  = window.location.pathname.split('/').pop() || 'index.html';
+  const curIdx   = PAGE_ORDER.indexOf(curPage);
+  const nextPage = (curIdx >= 0 && curIdx < PAGE_ORDER.length - 1)
+                 ? PAGE_ORDER[curIdx + 1] : null;
+
+  if (nextPage) {
+    const bar = document.createElement('div');
+    bar.id = 'next-page-bar';
+    bar.innerHTML =
+      `<span class="npb-label">Next —</span>` +
+      `<span class="npb-name">${PAGE_NAMES[nextPage]}</span>` +
+      `<span class="npb-arrow">→</span>` +
+      `<span class="npb-progress"></span>`;
+    document.body.appendChild(bar);
+
+    let atBottom    = false;
+    let navTimer    = null;
+    let overScrolls = 0;
+
+    function goNext() {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => { window.location.href = nextPage; }, 300);
+    }
+
+    function startCountdown() {
+      if (navTimer) return;
+      bar.classList.add('counting');
+      navTimer = setTimeout(goNext, 900);
+    }
+
+    function cancelCountdown() {
+      if (navTimer) { clearTimeout(navTimer); navTimer = null; }
+      bar.classList.remove('counting');
+    }
+
+    function isAtBottom() {
+      return window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 6;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (isAtBottom()) {
+        if (!atBottom) { atBottom = true; bar.classList.add('visible'); }
+      } else {
+        if (atBottom) {
+          atBottom = false;
+          bar.classList.remove('visible');
+          cancelCountdown();
+          overScrolls = 0;
+        }
+      }
+    }, { passive: true });
+
+    window.addEventListener('wheel', (e) => {
+      if (atBottom && e.deltaY > 0) {
+        overScrolls++;
+        if (overScrolls >= 2) startCountdown();
+      } else {
+        overScrolls = 0;
+      }
+    }, { passive: true });
+
+    bar.addEventListener('click', goNext);
+    bar.addEventListener('mouseenter', () => { if (atBottom) startCountdown(); });
+    bar.addEventListener('mouseleave', cancelCountdown);
+  }
+
 })();
