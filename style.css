@@ -112,11 +112,57 @@ strong { font-weight: 600; }
    PAGE HEADER (inner pages — compact navy banner)
 ══════════════════════════════════════════════════ */
 .page-hero {
-  background:
-    linear-gradient(135deg, rgba(10,25,47,0.82) 0%, rgba(17,34,64,0.75) 60%, rgba(10,25,47,0.88) 100%),
-    url('assets/images/bg-circuit.jpg') center/cover no-repeat;
   padding: 130px 48px 72px;
   position: relative; overflow: hidden;
+}
+
+/* ── Per-page hero backgrounds ── */
+/* About — circuit board */
+.page-hero.ph-about {
+  background:
+    linear-gradient(135deg, rgba(10,25,47,0.80) 0%, rgba(17,34,64,0.72) 60%, rgba(10,25,47,0.86) 100%),
+    url('assets/images/bg-circuit.jpg') center/cover no-repeat;
+}
+/* Research — AI neural */
+.page-hero.ph-research {
+  background:
+    linear-gradient(135deg, rgba(10,25,47,0.78) 0%, rgba(15,30,60,0.70) 55%, rgba(10,20,45,0.85) 100%),
+    url('assets/images/bg-ai-neural.jpg') center 40%/cover no-repeat;
+}
+/* Publications — math/science blackboard */
+.page-hero.ph-publications {
+  background:
+    linear-gradient(135deg, rgba(8,18,38,0.82) 0%, rgba(15,28,55,0.75) 60%, rgba(8,18,38,0.88) 100%),
+    url('assets/images/bg-tech-blue.jpg') center/cover no-repeat;
+}
+/* Projects — deep purple-blue mesh */
+.page-hero.ph-projects {
+  background:
+    linear-gradient(135deg, #0a192f 0%, #0f1f45 35%, #160f3a 65%, #0a1525 100%);
+}
+.page-hero.ph-projects::before {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(100,255,218,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(99,102,241,0.10) 0%, transparent 55%);
+}
+/* Experience — amber-navy professional */
+.page-hero.ph-experience {
+  background:
+    linear-gradient(135deg, #0a192f 0%, #12213d 40%, #1a1a2e 75%, #0a192f 100%);
+}
+.page-hero.ph-experience::before {
+  background:
+    radial-gradient(ellipse at 75% 60%, rgba(245,158,11,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 30%, rgba(100,255,218,0.06) 0%, transparent 50%);
+}
+/* Contact — minimal teal glow */
+.page-hero.ph-contact {
+  background:
+    linear-gradient(150deg, #071526 0%, #0d1f3c 45%, #071526 100%);
+}
+.page-hero.ph-contact::before {
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(100,255,218,0.12) 0%, transparent 60%);
 }
 /* subtle teal vignette glow at bottom-left */
 .page-hero::before {
