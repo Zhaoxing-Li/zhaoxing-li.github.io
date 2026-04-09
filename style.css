@@ -117,11 +117,11 @@ strong { font-weight: 600; }
 }
 
 /* ── Per-page hero backgrounds ── */
-/* About — circuit board */
+/* About */
 .page-hero.ph-about {
   background:
     linear-gradient(135deg, rgba(10,25,47,0.80) 0%, rgba(17,34,64,0.72) 60%, rgba(10,25,47,0.86) 100%),
-    url('assets/images/bg-circuit.jpg') center/cover no-repeat;
+    url('assets/images/bg-about.jpeg') center/cover no-repeat;
 }
 /* Research — AI neural */
 .page-hero.ph-research {
