@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Zhaoxing Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-brand">ZL</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="research.html">RESEARCH</a></li>
+      <li><a href="publications.html">PUBLICATIONS</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="experience.html">EXPERIENCE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="assets/cv.pdf" target="_blank" class="nav-cv">CV ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">What I work on</p>
+      <h1 class="page-hero-title">RESEARCH</h1>
+      <p class="page-hero-sub">AI Safety · LLM Governance · Multi-Agent Systems · Human-AI Interaction · Educational AI</p>
+    </div>
+  </div>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-heading reveal">RESEARCH AREAS</h2>
+      <div class="research-grid">
+        <div class="research-card reveal" style="--delay:0ms">
+          <div class="rc-icon">🛡️</div>
+          <h3>AI Safety & Governance</h3>
+          <p>My work addresses how to design AI systems that behave reliably, transparently, and in alignment with human values. This includes developing technical frameworks for LLM safety, mitigating prompt-injection attacks, building structured dialogue agents that resist manipulation, and proposing the Citizen-Centric MAS (C-LLMAS) paradigm for accountable participatory AI with ethical safeguards by design.</p>
+          <div class="rc-tags"><span>LLM Safety</span><span>AI Governance</span><span>Alignment</span><span>Prompt Injection</span></div>
+        </div>
+        <div class="research-card reveal" style="--delay:100ms">
+          <div class="rc-icon">🤖</div>
+          <h3>Multi-Agent Systems</h3>
+          <p>I design and evaluate architectures for heterogeneous multi-agent environments — particularly those involving LLM-based agents operating in safety-critical or socially sensitive contexts. This includes Human-in-the-Loop multi-robot collaboration (HMCF), runtime safety orchestrators that prevent unsafe behaviours, and agent frameworks for online group consensus building (PTFA).</p>
+          <div class="rc-tags"><span>MAS</span><span>LLM Agents</span><span>Human-in-the-Loop</span><span>Robotics</span></div>
+        </div>
+        <div class="research-card reveal" style="--delay:200ms">
+          <div class="rc-icon">🎓</div>
+          <h3>Educational AI</h3>
+          <p>I develop intelligent systems that personalise learning at scale. This spans knowledge tracing models (LBKT, MLFBK) that capture student cognitive states using BERT and LSTM architectures, student behaviour simulators (SimStu, Sim-GAIL) using Decision Transformers and GAIL, and RAG-augmented tutoring systems (TutorLLM) that deliver context-aware, student-state-specific recommendations.</p>
+          <div class="rc-tags"><span>Knowledge Tracing</span><span>ITS</span><span>RAG</span><span>Simulation</span></div>
+        </div>
+        <div class="research-card reveal" style="--delay:300ms">
+          <div class="rc-icon">💻</div>
+          <h3>Human-Computer Interaction</h3>
+          <p>My HCI work studies how people interact with AI-mediated systems and how design choices shape those interactions. Topics include AI-mediated text communication, gesture-based interfaces for ASL learning in VR/AR environments, personalised AI assistants, and user modelling in intelligent systems. I prioritise empirical user studies with real participants.</p>
+          <div class="rc-tags"><span>HCI</span><span>User Study</span><span>XAI</span><span>VR/AR</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-navy">
+    <div class="container">
+      <h2 class="section-heading light reveal">CURRENT PROJECTS</h2>
+      <div class="awards-grid">
+        <div class="award-card reveal" style="--delay:0ms;background:var(--navy-card);border-color:rgba(100,255,218,0.15)">
+          <span class="award-year" style="color:var(--teal);font-size:20px;min-width:56px">EPSRC</span>
+          <div class="award-info" style="color:var(--text-muted)">
+            <strong style="color:var(--white)">Citizen-Centric AI Systems (CCAIS)</strong><br>
+            Research Fellow · Nov 2023 – Present<br>
+            <em>LLM-based multi-agent safety, participatory AI governance</em>
+          </div>
+        </div>
+        <div class="award-card reveal" style="--delay:100ms;background:var(--navy-card);border-color:rgba(100,255,218,0.15)">
+          <span class="award-year" style="color:var(--teal);font-size:20px;min-width:56px">ESRC</span>
+          <div class="award-info" style="color:var(--text-muted)">
+            <strong style="color:var(--white)">For the FATES of Africa</strong><br>
+            Co-Investigator · Apr 2024 – Present · £118,957<br>
+            <em>Responsible AI pipeline for education in Sub-Saharan Africa</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">ZHAOXING LI</p>
+      <p class="footer-role">Research Fellow · University of Southampton</p>
+      <div class="footer-links">
+        <a href="mailto:zhaoxing.li@soton.ac.uk">Email</a>
+        <a href="https://github.com/Zhaoxing-Li" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/zhaoxing-li-194032170" target="_blank">LinkedIn</a>
+      </div>
+      <p class="footer-copy">© 2026 Zhaoxing Li · Built with care</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

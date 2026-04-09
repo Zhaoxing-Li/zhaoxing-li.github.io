@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Zhaoxing Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-brand">ZL</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="research.html">RESEARCH</a></li>
+      <li><a href="publications.html">PUBLICATIONS</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="experience.html">EXPERIENCE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="assets/cv.pdf" target="_blank" class="nav-cv">CV ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">What I've built</p>
+      <h1 class="page-hero-title">PROJECTS</h1>
+      <p class="page-hero-sub">Selected research projects across AI safety, educational AI, and human-computer interaction</p>
+    </div>
+  </div>
+
+  <section class="section-navy">
+    <div class="container">
+      <div class="projects-grid">
+
+        <div class="project-card reveal" style="--delay:0ms">
+          <div class="pc-top">
+            <span class="pc-tag">EPSRC · 2023–Present</span>
+            <span class="pc-status active-dot">Active</span>
+          </div>
+          <h3>Citizen-Centric AI Systems (CCAIS)</h3>
+          <p>Developed Human-in-the-Loop multi-robot collaboration frameworks (HMCF), the C-LLMAS paradigm for trustworthy participatory AI, and prompt-injection defence mechanisms. Led design of the Parallel Thinking Facilitation Agent (PTFA) — a 48-participant user study validated its effectiveness for online group consensus building.</p>
+          <div class="pc-tech"><span>LLM</span><span>Multi-Agent</span><span>AI Safety</span><span>EPSRC</span></div>
+        </div>
+
+        <div class="project-card reveal" style="--delay:100ms">
+          <div class="pc-top">
+            <span class="pc-tag">ESRC · 2024–Present</span>
+            <span class="pc-status active-dot">Active</span>
+          </div>
+          <h3>For the FATES of Africa</h3>
+          <p>Co-I leading responsible AI pipeline design for online education in Sub-Saharan Africa. Combined LLMs with local educational content to improve accessibility and fairness. Evaluated learner engagement and equity via mixed-methods studies; presented findings at CIES 2025 on ethical LLM design in resource-constrained environments.</p>
+          <div class="pc-tech"><span>LLM</span><span>EdTech</span><span>AI Fairness</span><span>ESRC £118k</span></div>
+        </div>
+
+        <div class="project-card reveal" style="--delay:200ms">
+          <div class="pc-top">
+            <span class="pc-tag">INTERACT 2025</span>
+          </div>
+          <h3>TutorLLM</h3>
+          <p>Personalised tutoring assistant integrating Retrieval-Augmented Generation (RAG) with Knowledge Tracing (KT) to deliver context-aware, student-state-specific learning recommendations. Directly addresses adaptive learning enhancement by combining semantic retrieval with cognitive state modelling.</p>
+          <div class="pc-tech"><span>RAG</span><span>Knowledge Tracing</span><span>LLM</span><span>HCI</span></div>
+        </div>
+
+        <div class="project-card reveal" style="--delay:300ms">
+          <div class="pc-top">
+            <span class="pc-tag">Neural Computing & Apps 2023</span>
+          </div>
+          <h3>Sim-GAIL: Student Behaviour Simulator</h3>
+          <p>GAIL-based student behaviour simulator learning decision-making policies from expert trajectories. Demonstrated improved policy fidelity and generalisation to unseen learners, outperforming baseline Deep Q-Learning and supervised sequence models across benchmark educational datasets.</p>
+          <div class="pc-tech"><span>RL</span><span>GAIL</span><span>Deep Learning</span><span>Simulation</span></div>
+        </div>
+
+        <div class="project-card reveal" style="--delay:400ms">
+          <div class="pc-top">
+            <span class="pc-tag">ITS 2024</span>
+          </div>
+          <h3>LBKT: LSTM-BERT Knowledge Tracing</h3>
+          <p>Hybrid deep learning architecture combining a BERT encoder with an LSTM sequential layer to capture long-range dependencies in student learning histories. Integrated Rasch-based embeddings for question difficulty and cognitive discrimination, achieving state-of-the-art AUC on benchmark educational datasets.</p>
+          <div class="pc-tech"><span>BERT</span><span>LSTM</span><span>Knowledge Tracing</span><span>Deep Learning</span></div>
+        </div>
+
+        <div class="project-card reveal" style="--delay:500ms">
+          <div class="pc-top">
+            <span class="pc-tag">EPSRC · 2022–2023</span>
+          </div>
+          <h3>AGENCY: Digital Well-being Agent</h3>
+          <p>Mobile AI digital well-being agent aimed at reducing users' screen time and improving digital health, integrating psychological models of self-regulation with engaging UX design. Part of the EPSRC-funded AGENCY project on assuring citizen agency in online harms.</p>
+          <div class="pc-tech"><span>Mobile AI</span><span>Well-being</span><span>UX</span><span>EPSRC</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">ZHAOXING LI</p>
+      <p class="footer-role">Research Fellow · University of Southampton</p>
+      <div class="footer-links">
+        <a href="mailto:zhaoxing.li@soton.ac.uk">Email</a>
+        <a href="https://github.com/Zhaoxing-Li" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/zhaoxing-li-194032170" target="_blank">LinkedIn</a>
+      </div>
+      <p class="footer-copy">© 2026 Zhaoxing Li · Built with care</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
